@@ -18,7 +18,7 @@ class Path
 
     current_path_array = @current_path.split("/")
     original_path = current_path_array.take((current_path_array.length) - up_count)
-    i = ((new_path_array.length + 1) - up_count)
+    i = up_count
     while i < new_path_array.length
       original_path.push(new_path_array[i])
       i = i + 1
@@ -33,4 +33,4 @@ puts path && path.current_path
 puts path.cd('../../x')
 puts path.cd('../x')
 puts path.cd('../x/e/f')
-puts path.current_path
+# puts path.current_path
