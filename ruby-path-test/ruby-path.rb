@@ -24,13 +24,14 @@ class Path
       i = i + 1
     end
     @current_path = original_path.join("/")
+    return self
   end
 
 end
 
 path = Path.new('/a/b/c/d')
 puts path && path.current_path
-puts path.cd('../../x')
-puts path.cd('../x')
-puts path.cd('../x/e/f')
+puts path.cd('../../x').current_path
+# puts path.cd('../x')
+# puts path.cd('../x/e/f')
 # puts path.current_path
